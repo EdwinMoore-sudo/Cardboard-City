@@ -474,21 +474,7 @@ public class Game extends JPanel
 			break;
 			
 		case 2:
-//			if(citizens.size() != 0)
-//			{
-//				for(int k = 0; k < citizens.size(); k++)
-//				{
-////				g.drawImage(citizens.get(k).getAppearance(), 
-////						((i - cTXMinMod) * 200 - xTileOffset) + ((int)(Math.random() * 100 + 50)) - 25, 
-////						((j - cTYMinMod) * 200 - 75) + ((int)(Math.random() * 100 + 50)) - 25,
-////						50, 50, paintingChild);
-//
-//					g.drawImage(citizens.get(k).getAppearance(), 
-//							((i - cTXMinMod) * 200 - xTileOffset) + (100) - 25, 
-//							((j - cTYMinMod) * 200 - 75) + (100) - 25,
-//							50, 50, paintingChild);
-//				}
-//			}
+
 			Building buildingsOnTile = locations.get(0).getGrid().getGridOfBuildings()[i][j];
 			if(buildingsOnTile.getProgress() != -1)
 			{
@@ -685,11 +671,7 @@ public class Game extends JPanel
 			if(locations.get(0).getGrid().getGridOfBuildings()[currentTileX][currentTileY].getProgress() != -1)
 			{
 				Building buildingsOnTile = locations.get(0).getGrid().getGridOfBuildings()[currentTileX][currentTileY];
-//				int citizenID = buildingsOnTile.getResidents()[0].getID();
-//				for(int i = 0; i < citizens.size(); i++) 
-//				{
-//					if(citizens.get(i).getID() == citizenID) citizens.get(i).setAssignedResident(true);
-//				}
+
 				buildingsOnTile.getResidents()[slotDrTOX] = citizens.get(clearer);
 			}
 			else
@@ -844,16 +826,7 @@ public class Game extends JPanel
 				}
 			}
 		}
-//		count = 30;
-//		for(int i = 0; i < count; i++)
-//		{
-//		g.drawImage(boxSet, (((i % 3) * 100) + (40 * (i % 3))) + 45, (((i / 3) * 100) + ((i / 3) * 40) + 100) + 50, (((i % 3) * 100) + (40 * (i % 3))) + 145, (((i / 3) * 100) + ((i / 3) * 40) + 100) + 150, 201, 0, 400, 200, paintingChild); 
-//		}
-		
-//		for(int i = 0; count > i; i++)
-//		{
-//			g.drawImage(boxSet, ((i * 100) + (40 * i)) + 45, (((i / 4) * 100) + ((i / 4) * 40) + 100) + 50, ((i * 100) + (40 * i)) + 145, (((i / 4) * 100) + ((i / 4) * 40) + 100) + 150, 201, 0, 400, 200, paintingChild); 
-//		}
+
 	}
 
 	public void drawResidents(Graphics g, ImageObserver paintingChild)
@@ -937,12 +910,7 @@ public class Game extends JPanel
 						sceneryOnTile.progress(citizens.get(i).getAssignedLocation()[3], progress);
 						if(sceneryOnTile.isTileCleared()) locations.get(0).setGround(citizens.get(i).getAssignedLocation()[0], citizens.get(i).getAssignedLocation()[1], 2);
 					}
-	//				
-	//				if(citizens.get(i).getSchedule()[clock[2]].getTaskType() != 9)
-	//				{
-	//					this.removeActiveClearer(progress)
-	//					sceneryOnTile.getActiveClearers()[citizens.get(i).getAssignedLocation()[2]][citizens.get(i).getAssignedLocation()[3]] = null;
-	//				}
+
 				}
 			}
 			else if(citizens.get(i).getSchedule()[clock[5]].getTaskType() == 3)
